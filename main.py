@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
+        Form.setWindowIcon(QtGui.QIcon("./icon.ico"))
         Form.resize(800, 500)
         Form.setMinimumSize(QtCore.QSize(800, 500))
         Form.setMaximumSize(QtCore.QSize(800, 500))
