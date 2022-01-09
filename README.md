@@ -1,5 +1,5 @@
 #  Scrcpy GUI
-解放双手！基于 PyQt5 制作的 Scrcpy GUI 让你活力满满，欢乐无限！
+解放双手！基于 PyQt5 制作的 Scrcpy GUI 让你摆脱终端！
 
 # 简介
 ### 1. 功能
