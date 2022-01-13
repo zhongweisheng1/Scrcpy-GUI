@@ -311,8 +311,6 @@ class Ui_Form(object):
         self.Z_11.setText(_translate("Form", "https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md"))
         self.Z_21.setText(_translate("Form", "GitHub: zhongweisheng1"))
 
-Flag = True
-
 class App(Ui_Form):
     def __init__(self):
         self.flag = True
@@ -358,7 +356,9 @@ class App(Ui_Form):
 
     def tRefresh(self):
         start = time.time()
-        while Flag:
+        while True:
+            if self.flag:
+                return
             QtWidgets.QApplication.processEvents()
             end = time.time()
             if end - start >= 2:
