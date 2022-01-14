@@ -311,16 +311,16 @@ class Ui_Form(object):
         self.Z_11.setText(_translate("Form", "https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md"))
         self.Z_21.setText(_translate("Form", "GitHub: zhongweisheng1"))
 
-class App(Ui_Form):
+class App(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
+        super().__init__()
         self.flag = True
-        self.Form = QtWidgets.QWidget()
 
-        super().setupUi(self.Form)
-        super().retranslateUi(self.Form)
+        self.setupUi(self)
+        self.retranslateUi(self)
 
         self.Init()
-        self.Form.show()
+        self.show()
         self.tRefresh()
 
     def Init(self):
@@ -356,9 +356,7 @@ class App(Ui_Form):
 
     def tRefresh(self):
         start = time.time()
-        while True:
-            if self.flag:
-                return
+        while self.flag:
             QtWidgets.QApplication.processEvents()
             end = time.time()
             if end - start >= 2:
@@ -410,10 +408,11 @@ class App(Ui_Form):
                     i += 1
                 start = time.time()
 
+    def closeEvent(self, a0: QtGui.QCloseEvent):
+        super().closeEvent(a0)
+        self.flag = False
+        sys.exit(0)
+
 QApp = QtWidgets.QApplication([])
 
 app = App()
-
-state = QApp.exec_()
-app.flag = False
-sys.exit(state)
