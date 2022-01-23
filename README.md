@@ -1,6 +1,10 @@
 #  Scrcpy GUI
 解放双手！基于 PyQt5 制作的 Scrcpy GUI 让你摆脱终端！
 
+![Name](https://img.shields.io/badge/Name-Scrcpy%20GUI-green)
+![Language](https://img.shields.io/badge/Language-Python-blue)
+![Version](https://img.shields.io/badge/Version-v1.1.1-orange)
+
 # 简介
 ### 1. 功能
   - [x] 界面简洁，清楚直观
