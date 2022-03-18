@@ -346,13 +346,13 @@ class App(QtWidgets.QWidget, Ui_Form):
 
     def fA_IPConnect(self):
         IP = self.A_IPAddr.text()
-        os.popen(os.path.join(self.ScrcpyPath + "adb.exe") + " connect " + IP).read()
+        os.popen("start " + os.path.join(self.ScrcpyPath + "adb.exe") + " connect " + IP).read()
 
     def Connect(self, name):
-        os.popen(os.path.join(self.ScrcpyPath + "scrcpy.exe") + " -s " + name + " " + self.CommandLine).read()
+        os.popen("start " + os.path.join(self.ScrcpyPath + "scrcpy.exe") + " -s " + name + " " + self.CommandLine).read()
 
     def Delete(self, name):
-        os.popen(os.path.join(self.ScrcpyPath + "adb.exe") + " disconnect " + name).read()
+        os.popen("start " + os.path.join(self.ScrcpyPath + "adb.exe") + " disconnect " + name).read()
 
     def tRefresh(self):
         start = time.time()
