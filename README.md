@@ -3,7 +3,7 @@
 
 ![Name](https://img.shields.io/badge/Name-Scrcpy%20GUI-green)
 ![Language](https://img.shields.io/badge/Language-Python-blue)
-![Version](https://img.shields.io/badge/Version-v1.1.1-orange)
+![Version](https://img.shields.io/badge/Version-v1.1.2-orange)
 
 # 简介
 ### 1. 功能
